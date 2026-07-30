@@ -4,193 +4,918 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPA Kelas IX | Bab 1: Sistem Koordinasi dan Homeostasis</title>
+    
+    <!-- Google Fonts untuk keterbacaan optimal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; font-size: 16px; line-height: 1.7; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; padding: 35px 30px; text-align: center; border-radius: 12px; margin-bottom: 30px; }
-        header h1 { font-family: 'Poppins', sans-serif; font-size: 2rem; margin-bottom: 10px; }
-        header h2 { font-size: 1.2rem; font-weight: 500; margin-bottom: 15px; opacity: 0.95; }
-        header p { font-size: 1rem; opacity: 0.9; margin-bottom: 15px; }
-        .badge { display: inline-block; background: #f59e0b; color: #1e293b; padding: 6px 18px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; }
-        .intro-box { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px; }
-        .intro-box h3 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin-bottom: 10px; }
-        .instructions { background: #eff6ff; border-left: 5px solid #2563eb; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .instructions h4 { color: #2563eb; margin-bottom: 12px; font-family: 'Poppins', sans-serif; font-size: 1.1rem; }
-        .instructions ul { margin-left: 20px; }
-        .instructions li { margin-bottom: 8px; color: #475569; font-size: 0.95rem; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 25px; }
-        h2 { font-family: 'Poppins', sans-serif; color: #2563eb; font-size: 1.6rem; margin: 30px 0 15px 0; padding-bottom: 8px; border-bottom: 3px solid #f59e0b; }
-        h3 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin: 20px 0 12px 0; }
-        h4 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin: 15px 0 10px 0; }
-        p { color: #475569; margin-bottom: 15px; text-align: justify; font-size: 0.95rem; }
-        ul, ol { margin: 12px 0 12px 25px; }
-        li { margin-bottom: 10px; color: #475569; font-size: 0.95rem; }
-        strong { color: #1e293b; font-weight: 600; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
-        th { background: #2563eb; color: white; padding: 12px; text-align: left; font-weight: 600; }
-        td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; color: #475569; }
-        tr:nth-child(even) { background: #f8fafc; }
-        .img-container { margin: 25px 0; text-align: center; }
-        .img-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .caption { font-size: 0.85rem; color: #64748b; margin-top: 10px; font-style: italic; }
-        .key-material { background: #f0fdf4; border: 2px solid #10b981; padding: 20px; border-radius: 12px; margin: 25px 0; }
-        .key-material h4 { color: #10b981; font-size: 1.15rem; margin-bottom: 12px; }
-        .key-material ul { margin-left: 20px; }
-        .key-material li { margin-bottom: 8px; color: #1e293b; }
-        .enrichment { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .enrichment h4 { color: #92400e; font-size: 1.05rem; margin-bottom: 12px; }
-        .enrichment ul { margin-left: 20px; color: #78350f; }
-        .enrichment li { margin-bottom: 6px; }
-        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
-        .comparison-box { background: #f8fafc; padding: 15px; border-radius: 8px; border: 2px solid #e2e8f0; }
-        .comparison-box h4 { margin-bottom: 10px; color: #2563eb; }
-        .comparison-box ol { margin-left: 15px; font-size: 0.85rem; }
-        footer { text-align: center; padding: 25px; color: #64748b; font-size: 0.9rem; border-top: 2px solid #e2e8f0; margin-top: 30px; }
-        @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } header h1 { font-size: 1.6rem; } h2 { font-size: 1.4rem; } }
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f59e0b;
+            --success-color: #10b981;
+            --warning-bg: #fef3c7;
+            --info-bg: #eff6ff;
+            --success-bg: #f0fdf4;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #475569;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: #1e293b;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        /* Content Cards */
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 25px;
+        }
+
+        .intro-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Instructions Box */
+        .instructions {
+            background: var(--info-bg);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .instructions h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .instructions ul {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin: 20px 0 12px 0;
+            color: var(--text-main);
+        }
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            margin: 15px 0 10px 0;
+            color: var(--text-main);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e2e8f0;
+            color: var(--text-secondary);
+        }
+
+        tr:hover {
+            background-color: #f8fafc;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Key Material Box (Green) */
+        .key-material {
+            background: var(--success-bg);
+            border: 2px solid var(--success-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 25px 0;
+        }
+
+        .key-material h4 {
+            color: var(--success-color);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .key-material ul {
+            margin-left: 20px;
+        }
+
+        .key-material li {
+            margin-bottom: 8px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        /* Enrichment Box (Yellow) */
+        .enrichment {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .enrichment h4 {
+            color: #92400e;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .enrichment p, .enrichment ul {
+            color: #78350f;
+            font-size: 0.9rem;
+        }
+
+        .enrichment li {
+            margin-bottom: 6px;
+            margin-left: 20px;
+        }
+
+        /* Images */
+        .image-container {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 10px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 12px 0 12px 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Comparison Tables */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .comparison-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .comparison-box h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        .comparison-box ol, .comparison-box ul {
+            margin-left: 15px;
+            font-size: 0.85rem;
+        }
+
+        .comparison-box li {
+            margin-bottom: 5px;
+        }
+
+        /* Flow diagram for homeostasis */
+        .flow-diagram {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body { font-size: 15px; }
+            header h1 { font-size: 1.6rem; }
+            header h2 { font-size: 1.1rem; }
+            .card { padding: 20px; }
+            h2 { font-size: 1.4rem; }
+            h3 { font-size: 1.15rem; }
+            .comparison-grid { grid-template-columns: 1fr; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 8px; }
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <header>
-        <h1>IPA Kelas IX</h1>
-        <h2>Bab 1: Sistem Koordinasi dan Homeostasis</h2>
-        <p>MATERI RINGKAS IPA KELAS IX</p>
-        <span class="badge">Kelas IX SMP</span>
-    </header>
 
-    <div class="intro-box">
-        <h3>BAB 1<br>Sistem Koordinasi dan Homeostasis Tubuh Manusia</h3>
-        <p>Disusun berdasarkan Peta Konsep Bab 1 — untuk belajar mandiri secara bertahap</p>
-    </div>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>IPA Kelas IX</h1>
+            <h2>Bab 1: Sistem Koordinasi dan Homeostasis</h2>
+            <p>MATERI RINGKAS IPA KELAS IX</p>
+            <span class="badge">Kelas IX SMP</span>
+        </header>
 
-    <!-- GAMBAR 0 -->
-    <div class="img-container">
-        <img src="gambar0_peta_konsep.png" alt="Peta Konsep">
-        <div class="caption">Gambar 0. Peta Konsep Bab 1: Sistem Koordinasi dan Homeostasis</div>
-    </div>
-
-    <div class="instructions">
-        <h4>🔑 Cara Menggunakan Materi Ini</h4>
-        <ul>
-            <li>Pelajari materi berurutan sesuai alur peta konsep: Sistem Koordinasi → Homeostasis.</li>
-            <li>Setiap sub-bab memuat 'Kunci Materi' (kotak hijau) berisi inti yang wajib kamu ingat.</li>
-            <li>Kotak kuning 'Pengayaan' berisi materi tambahan di luar buku wajib.</li>
-            <li>Kerjakan 'Cek Pemahaman' di akhir setiap bagian.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>A. Sistem Koordinasi Manusia</h2>
-        <p>Sistem koordinasi adalah sistem dalam tubuh yang bertugas mengatur dan mengoordinasikan seluruh aktivitas tubuh agar tubuh dapat merespons rangsangan dari luar maupun dari dalam tubuh secara tepat.</p>
-        
-        <h3>1. Sistem Saraf Manusia</h3>
-        <p>Sistem saraf berfungsi untuk menerima, mengolah, dan merespons rangsang.</p>
-
-        <h4>a. Struktur dan Fungsi Neuron</h4>
-        <div class="img-container">
-            <img src="gambar1.2_neuron.png" alt="Neuron">
-            <div class="caption">Gambar 1.2 Struktur Neuron</div>
+        <!-- INTRO -->
+        <div class="intro-box">
+            <h3>BAB 1<br>Sistem Koordinasi dan Homeostasis Tubuh Manusia</h3>
+            <p>Disusun berdasarkan Peta Konsep Bab 1 — untuk belajar mandiri secara bertahap</p>
         </div>
 
-        <table>
-            <tr><th>Bagian Neuron</th><th>Fungsi</th></tr>
-            <tr><td><strong>Dendrit</strong></td><td>Menerima impuls dari sel lain</td></tr>
-            <tr><td><strong>Badan sel</strong></td><td>Pusat pengaturan aktivitas sel saraf</td></tr>
-            <tr><td><strong>Akson</strong></td><td>Meneruskan impuls ke sel saraf lainnya</td></tr>
-            <tr><td><strong>Selubung mielin</strong></td><td>Mempercepat jalannya impuls</td></tr>
-        </table>
+        <!-- PETA KONSEP -->
+        <div class="image-container">
+            <img src="images/gambar0_peta_konsep.png" alt="Peta Konsep Bab 1: Sistem Koordinasi dan Homeostasis">
+            <div class="image-caption">Gambar 0. Peta Konsep Bab 1: Sistem Koordinasi dan Homeostasis</div>
+        </div>
 
-        <div class="key-material">
-            <h4>🔑 Kunci Materi — Sistem Saraf</h4>
+        <!-- CARA MENGGUNAKAN -->
+        <div class="instructions">
+            <h4>🔑 Cara Menggunakan Materi Ini</h4>
             <ul>
-                <li>Neuron memiliki 3 jenis: sensoris, motoris, konektor</li>
-                <li>Sistem saraf pusat = otak + medula spinalis</li>
-                <li>Gerak sadar dikendalikan otak, gerak refleks dikendalikan medula spinalis</li>
+                <li>Pelajari materi berurutan sesuai alur peta konsep: Sistem Koordinasi → Homeostasis.</li>
+                <li>Setiap sub-bab memuat 'Kunci Materi' (kotak hijau) berisi inti yang wajib kamu ingat.</li>
+                <li>Kotak kuning 'Pengayaan' berisi materi tambahan di luar buku wajib untuk memperdalam pemahamanmu.</li>
+                <li>Kotak bergaris putus-putus menandai tempat gambar pendukung — cari dan tempelkan gambar sesuai keterangan agar lebih mudah dipahami.</li>
+                <li>Kerjakan 'Cek Pemahaman' di akhir setiap bagian untuk menguji dirimu sendiri.</li>
             </ul>
         </div>
+
+        <!-- A. SISTEM KOORDINASI MANUSIA -->
+        <div class="card">
+            <h2>A. Sistem Koordinasi Manusia</h2>
+            
+            <p>Sistem koordinasi adalah sistem dalam tubuh yang bertugas mengatur dan mengoordinasikan seluruh aktivitas tubuh agar tubuh dapat merespons rangsangan dari luar maupun dari dalam tubuh secara tepat. Berdasarkan peta konsep, sistem koordinasi manusia terdiri atas tiga komponen utama:</p>
+            
+            <ol>
+                <li>Sistem Saraf</li>
+                <li>Alat Indra</li>
+                <li>Sistem Endokrin (hormon).</li>
+            </ol>
+
+            <!-- 1. SISTEM SARAF MANUSIA -->
+            <h3>1. Sistem Saraf Manusia</h3>
+            
+            <p>Sistem saraf berfungsi untuk menerima, mengolah, dan merespons rangsang baik dari luar maupun dari dalam tubuh. Sistem saraf tersusun atas jutaan sel saraf yang disebut neuron.</p>
+
+            <h4>a. Struktur dan Fungsi Neuron</h4>
+
+            <div class="image-container">
+                <img src="images/gambar1.2_neuron.png" alt="Struktur Neuron">
+                <div class="image-caption">Gambar 1.2 Struktur Neuron</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bagian Neuron</th>
+                        <th>Fungsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dendrit</strong></td>
+                        <td>Menerima impuls (sinyal) dari sel lain dan meneruskannya ke badan sel.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Badan sel (Nukleus)</strong></td>
+                        <td>Pusat pengaturan aktivitas sel saraf; menerima & mengintegrasikan sinyal dari dendrit.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Akson</strong></td>
+                        <td>Meneruskan impuls dari badan sel menuju sel saraf lainnya.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Selubung mielin</strong></td>
+                        <td>Mempercepat jalannya impuls dan melindungi akson.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sel Schwann</strong></td>
+                        <td>Membentuk selubung mielin.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nodus Ranvier</strong></td>
+                        <td>Bagian akson tanpa mielin; tempat masuknya ion (mempercepat impuls).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sinapsis</strong></td>
+                        <td>Ujung akson yang menghubungkan satu sel saraf dengan sel saraf/sel lain.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>b. Jenis-Jenis Neuron Berdasarkan Fungsi</h4>
+            
+            <ol>
+                <li><strong>Neuron sensoris</strong> — menghantarkan impuls dari organ penerima rangsang (reseptor) menuju pusat saraf.</li>
+                <li><strong>Neuron motoris</strong> — menghantarkan impuls dari pusat saraf menuju organ efektor (otot atau kelenjar).</li>
+                <li><strong>Neuron konektor</strong> — menghubungkan satu neuron dengan neuron lainnya.</li>
+            </ol>
+
+            <h4>c. Susunan Sistem Saraf: Pusat dan Tepi</h4>
+            
+            <p>Sesuai peta konsep, sistem saraf terdiri atas <strong>Saraf Pusat</strong> dan <strong>Saraf Tepi</strong>.</p>
+            
+            <ol>
+                <li><strong>Saraf Pusat</strong> — meliputi otak dan medula spinalis (sumsum tulang belakang), dilindungi oleh selaput meninges (durameter, araknoid, piameter).</li>
+                <li><strong>Saraf Tepi</strong> — menghubungkan sistem saraf pusat dengan seluruh bagian tubuh lainnya.</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="images/gambar1.4_otak.png" alt="Bagian Otak">
+                <div class="image-caption">Gambar 1.4 Bagian Otak</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bagian Otak</th>
+                        <th>Fungsi Utama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Otak besar (serebrum)</strong></td>
+                        <td>Pusat gerakan sadar dan mengolah impuls dari berbagai indra.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Otak kecil (serebelum)</strong></td>
+                        <td>Pusat keseimbangan gerakan, kontrol gerakan mata, dan koordinasi gerakan terampil.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medula spinalis</strong></td>
+                        <td>Mengendalikan gerak refleks (respons cepat tanpa disadari).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kelenjar pituitari</strong></td>
+                        <td>Menghasilkan berbagai macam hormon.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kelenjar pineal</strong></td>
+                        <td>Mengatur jam biologis tubuh (misalnya waktu bangun-tidur).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medula oblongata</strong></td>
+                        <td>Menghubungkan otak dengan medula spinalis; mengatur kerja organ vital tak sadar seperti detak jantung, pernapasan, dan tekanan darah.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="enrichment">
+                <h4>📈 Pengayaan — Pembagian Sistem Saraf Tepi</h4>
+                <p>Sistem saraf tepi (saraf yang menghubungkan sistem saraf pusat ke seluruh organ tubuh) dapat dibedakan lagi menjadi dua kelompok berdasarkan cara kerjanya:</p>
+                <ul>
+                    <li><strong>Saraf somatik</strong> — mengatur gerakan otot yang disadari, misalnya menggerakkan tangan atau berjalan.</li>
+                    <li><strong>Saraf otonom</strong> — mengatur kerja organ dalam secara otomatis (di luar kesadaran), misalnya detak jantung dan gerakan usus.</li>
+                </ul>
+                <p>Saraf otonom terbagi lagi menjadi <strong>saraf simpatik</strong> dan <strong>parasimpatik</strong> yang bekerja saling berlawanan.</p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Saraf Simpatik</th>
+                        <th>Saraf Parasimpatik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aktif saat tubuh dalam kondisi siaga/darurat.</td>
+                        <td>Aktif saat tubuh dalam kondisi tenang/istirahat.</td>
+                    </tr>
+                    <tr>
+                        <td>Mempercepat detak jantung.</td>
+                        <td>Memperlambat detak jantung.</td>
+                    </tr>
+                    <tr>
+                        <td>Melebarkan pupil mata.</td>
+                        <td>Menyempitkan pupil mata.</td>
+                    </tr>
+                    <tr>
+                        <td>Memperlambat kerja pencernaan.</td>
+                        <td>Merangsang/mempercepat kerja pencernaan.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>d. Mekanisme Gerak: Sadar vs Refleks</h4>
+            
+            <p>Perbedaan utama gerak sadar dan gerak refleks terletak pada keterlibatan otak dalam pengambilan keputusan, seperti diperlihatkan pada alur berikut.</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-box">
+                    <h4>Gerak Sadar</h4>
+                    <ol>
+                        <li>Rangsangan</li>
+                        <li>Reseptor (indra)</li>
+                        <li>Saraf sensoris</li>
+                        <li>Otak (diolah & diputuskan)</li>
+                        <li>Saraf motoris</li>
+                        <li>Efektor (otot bergerak)</li>
+                    </ol>
+                </div>
+                <div class="comparison-box">
+                    <h4>Gerak Refleks</h4>
+                    <ol>
+                        <li>Rangsangan</li>
+                        <li>Reseptor (indra)</li>
+                        <li>Saraf sensoris</li>
+                        <li>Medula spinalis (langsung diproses)</li>
+                        <li>Saraf motoris</li>
+                        <li>Efektor (otot bergerak)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <p><strong>Gerak sadar</strong> melibatkan otak sehingga responsnya lebih lambat namun terencana (contoh: mengambil gelas). <strong>Gerak refleks</strong> tidak melibatkan otak di awal sehingga responsnya sangat cepat, berguna untuk melindungi tubuh dari bahaya (contoh: menarik tangan dari benda panas).</p>
+
+            <!-- KUNCI MATERI SISTEM SARAF -->
+            <div class="key-material">
+                <h4> Kunci Materi — Sistem Saraf</h4>
+                <ul>
+                    <li>Neuron memiliki 3 jenis berdasarkan fungsi: sensoris, motoris, konektor.</li>
+                    <li>Sistem saraf pusat = otak + medula spinalis; sistem saraf tepi = somatik (sadar) dan otonom (tak sadar: simpatik & parasimpatik).</li>
+                    <li>Gerak sadar dikendalikan otak (lebih lambat), gerak refleks dikendalikan medula spinalis (lebih cepat, untuk perlindungan).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. ALAT INDRA MANUSIA -->
+        <div class="card">
+            <h2>2. Alat Indra Manusia</h2>
+            
+            <p>Manusia memiliki lima alat indra (pancaindra) yang bekerja sama dengan sistem saraf untuk mengenali keadaan lingkungan: penglihatan, pendengaran, peraba, pengecap, dan penciuman.</p>
+
+            <h3>a. Indra Penglihatan (Mata)</h3>
+            
+            <p>Mata menangkap rangsang cahaya. Bola mata tersusun atas tiga lapisan utama: sklera, koroid, dan retina.</p>
+
+            <div class="image-container">
+                <img src="images/gambar1.5_mata.png" alt="Bagian Mata">
+                <div class="image-caption">Gambar 1.5 Bagian Mata</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bagian Mata</th>
+                        <th>Fungsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sklera</strong></td>
+                        <td>Lapisan terluar bola mata; tempat perlekatan otot mata.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kornea</strong></td>
+                        <td>Bagian tembus pandang sklera; mentransmisikan cahaya & melindungi mata.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Koroid</strong></td>
+                        <td>Mengandung pembuluh darah pemberi nutrisi mata.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retina</strong></td>
+                        <td>Lapisan terdalam; menangkap bayangan benda (berisi sel batang & sel kerucut).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Iris & pupil</strong></td>
+                        <td>Mengatur jumlah cahaya yang masuk ke mata; iris memberi warna khas mata.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lensa mata</strong></td>
+                        <td>Memfokuskan cahaya agar bayangan jatuh tepat di retina.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Sel batang (rodopsin) bekerja pada cahaya redup dan tidak peka warna, sedangkan sel kerucut (iodopsin) peka warna dan bekerja pada cahaya terang.</p>
+
+            <h3>b. Indra Pendengaran (Telinga)</h3>
+            
+            <p>Telinga mendeteksi gelombang suara sekaligus berperan menjaga keseimbangan tubuh. Telinga tersusun atas tiga bagian: luar, tengah, dan dalam.</p>
+
+            <div class="image-container">
+                <img src="images/gambar1.6_telinga.png" alt="Bagian Telinga">
+                <div class="image-caption">Gambar 1.6 Struktur Telinga</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bagian Telinga</th>
+                        <th>Fungsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Daun telinga</strong></td>
+                        <td>Menangkap gelombang bunyi.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Membran timpani (gendang telinga)</strong></td>
+                        <td>Memperkuat getaran gelombang bunyi secara mekanis.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Saluran Eustachius</strong></td>
+                        <td>Menyeimbangkan tekanan udara di kedua sisi membran timpani.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tulang pendengaran (maleus, inkus, stapes)</strong></td>
+                        <td>Meneruskan getaran gelombang bunyi.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Koklea (rumah siput)</strong></td>
+                        <td>Berisi organ Corti yang mengubah getaran menjadi impuls saraf pendengaran.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>c. Indra Penciuman (Hidung)</h3>
+            
+            <p>Hidung mendeteksi bau melalui partikel kimia yang larut dalam lapisan lembap rongga hidung. Sel yang berfungsi mendeteksi bau disebut sel olfaktorius, yang terletak di bagian atas rongga hidung.</p>
+
+            <div class="image-container">
+                <img src="images/gambar1.7_hidung.png" alt="Struktur Hidung dan Penciuman">
+                <div class="image-caption">Gambar 1.7</div>
+            </div>
+
+            <div class="enrichment">
+                <h4>📈 Pengayaan — Hidung Sebagai Kemoreseptor Gas</h4>
+                <p>Hidung disebut kemoreseptor gas karena mendeteksi zat kimia yang terbawa di udara. Beberapa bagian hidung yang mendukung fungsi ini:</p>
+                <ul>
+                    <li><strong>Rambut hidung (silia)</strong> — menyaring debu dan kotoran kasar agar tidak masuk ke saluran napas.</li>
+                    <li><strong>Selaput lendir (mukosa)</strong> — menangkap kotoran halus, melembapkan, dan menghangatkan udara sebelum masuk ke paru-paru.</li>
+                    <li><strong>Tulang rawan & tulang hidung</strong> — membentuk dan melindungi struktur hidung.</li>
+                </ul>
+            </div>
+
+            <h3>d. Indra Pengecap (Lidah)</h3>
+            
+            <p>Lidah berperan sebagai kemoreseptor cair karena mendeteksi zat kimia yang telah larut dalam air liur. Permukaan lidah dipenuhi tonjolan kecil bernama papila yang mengandung ribuan reseptor pengecap. Manusia dapat mendeteksi lima rasa dasar: manis, asam, asin, pahit, dan umami (rasa gurih dari glutamat). Reseptor untuk kelima rasa ini pada dasarnya tersebar di hampir seluruh permukaan lidah, bukan hanya terkumpul pada satu area tertentu.</p>
+
+            <div class="image-container">
+                <img src="images/gambar1.8_lidah.png" alt="Zona Rasa pada Lidah">
+                <div class="image-caption">Gambar 1.8</div>
+            </div>
+
+            <div class="enrichment">
+                <h4>📈 Pengayaan — Jenis-Jenis Papila pada Lidah</h4>
+                <p>Berdasarkan bentuknya, papila lidah dibedakan menjadi tiga jenis:</p>
+                <ul>
+                    <li><strong>Papila filiformis</strong> — bentuk seperti benang halus, tersebar di seluruh permukaan lidah; berfungsi merasakan tekstur makanan, bukan mengecap rasa.</li>
+                    <li><strong>Papila fungiformis</strong> — bentuk seperti jamur kecil, berwarna kemerahan, terletak di bagian depan dan tepi lidah.</li>
+                    <li><strong>Papila sirkumvalata</strong> — ukuran paling besar, tersusun membentuk huruf V terbalik di pangkal lidah.</li>
+                </ul>
+            </div>
+
+            <h3>e. Indra Peraba (Kulit)</h3>
+            
+            <p>Kulit berperan sebagai tangoreseptor yang mengandung jutaan ujung saraf untuk mendeteksi sentuhan, tekanan, suhu, dan nyeri. Reseptor kulit paling banyak terdapat di wajah, lidah, bibir, dan ujung jari. Selain sebagai indra, kulit juga berfungsi melindungi tubuh dari kuman, mengatur suhu tubuh, dan membentuk vitamin D.</p>
+
+            <div class="image-container">
+                <img src="images/gambar1.9_kulit.png" alt="Struktur Kulit dan Reseptor">
+                <div class="image-caption">Gambar 1.9 Struktur Kulit</div>
+            </div>
+
+            <div class="enrichment">
+                <h4>📈 Pengayaan — Tiga Lapisan Utama Kulit</h4>
+                <p>Secara struktural, kulit manusia tersusun atas tiga lapisan yang saling menopang:</p>
+                <ul>
+                    <li><strong>Epidermis (kulit ari)</strong> — lapisan terluar dan tertipis, tidak memiliki pembuluh darah; bagian atasnya terdiri atas sel kulit mati yang terus mengelupas, dan bagian bawahnya mengandung pigmen melanin pemberi warna kulit sekaligus pelindung dari sinar UV.</li>
+                    <li><strong>Dermis (kulit jangat)</strong> — lapisan tengah yang paling tebal; berisi kelenjar keringat, kelenjar minyak, folikel rambut, pembuluh darah, dan ujung saraf peraba (sensor utama indra peraba).</li>
+                    <li><strong>Hipodermis (jaringan ikat bawah kulit)</strong> — lapisan terdalam berisi jaringan lemak; berfungsi menyimpan cadangan energi, menahan benturan, dan menjaga kehangatan tubuh.</li>
+                </ul>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reseptor Kulit</th>
+                        <th>Fungsi (Mendeteksi)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Korpus Meissner</strong></td>
+                        <td>Sentuhan ringan.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Korpus Pacini</strong></td>
+                        <td>Tekanan kuat.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lempeng Merkel</strong></td>
+                        <td>Tekanan ringan.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Korpus Ruffini</strong></td>
+                        <td>Panas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Korpus Krause</strong></td>
+                        <td>Dingin.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ujung saraf tanpa selaput</strong></td>
+                        <td>Rasa sakit/nyeri.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- KUNCI MATERI ALAT INDRA -->
+            <div class="key-material">
+                <h4>🔑 Kunci Materi — Alat Indra</h4>
+                <ul>
+                    <li>5 indra: mata (cahaya), telinga (suara & keseimbangan), hidung (bau, kemoreseptor gas), lidah (rasa, kemoreseptor cair), kulit (sentuh, suhu, tekan, nyeri).</li>
+                    <li>Retina mata punya sel batang (cahaya redup) dan sel kerucut (warna, cahaya terang).</li>
+                    <li>Lidah mengenali 5 rasa dasar (manis, asam, asin, pahit, umami) lewat 3 jenis papila: filiformis, fungiformis, sirkumvalata.</li>
+                    <li>Kulit tersusun atas 3 lapisan: epidermis, dermis, dan hipodermis.</li>
+                    <li>Semua indra bekerja sama dengan sistem saraf untuk mengirim informasi ke otak.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 3. SISTEM ENDOKRIN -->
+        <div class="card">
+            <h2>3. Sistem Endokrin (Hormon)</h2>
+            
+            <p>Berbeda dengan sistem saraf, sistem endokrin menghasilkan hormon yang diedarkan melalui darah oleh kelenjar endokrin (kelenjar tanpa saluran). Hormon bekerja lebih lambat daripada saraf, namun pengaruhnya berlangsung dalam jangka waktu lebih lama dan tersebar lebih luas ke seluruh tubuh.</p>
+
+            <div class="image-container">
+                <img src="images/gambar1.10_endokrin.png" alt="Kelenjar Endokrin">
+                <div class="image-caption">Gambar 1.10 Kelenjar Endokrin</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kelenjar Endokrin</th>
+                        <th>Hormon & Fungsinya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hipofisis (pituitari)</strong></td>
+                        <td>GH (pertumbuhan), TSH (merangsang tiroid), ACTH (merangsang adrenal), FSH & LH (reproduksi), ADH (reabsorpsi air di ginjal), oksitosin (kontraksi saat melahirkan).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pineal</strong></td>
+                        <td>Melatonin — mengatur jam biologis tubuh.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiroid</strong></td>
+                        <td>Tiroksin — mengatur metabolisme tubuh.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paratiroid</strong></td>
+                        <td>Parathormon — mengubah kalsium tulang menjadi kalsium darah.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adrenal</strong></td>
+                        <td>Adrenalin — mempercepat denyut jantung.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pankreas</strong></td>
+                        <td>Insulin & glukagon — mengatur kadar gula darah.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Testis</strong></td>
+                        <td>Testosteron — perkembangan seksual pria.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ovarium</strong></td>
+                        <td>Estrogen (seks sekunder wanita) dan progesteron (menjaga ketebalan rahim).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- KUNCI MATERI HORMON -->
+            <div class="key-material">
+                <h4>🔑 Kunci Materi — Hormon</h4>
+                <ul>
+                    <li>Hormon dihasilkan kelenjar endokrin dan diedarkan lewat darah (tanpa saluran khusus).</li>
+                    <li>Kerja hormon lambat tapi efeknya bertahan lama & menyebar luas.</li>
+                    <li>Setiap kelenjar menghasilkan hormon dengan fungsi spesifik (lihat tabel).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- B. HOMEOSTASIS -->
+        <div class="card">
+            <h2>B. Homeostasis</h2>
+            
+            <p>Sesuai peta konsep, Homeostasis disebut juga sebagai pengetahuan internal tubuh, yang dipengaruhi oleh sistem saraf dan sistem endokrin. Homeostasis adalah proses otomatis tubuh untuk mempertahankan kondisi internal tetap stabil, meskipun terjadi perubahan dari dalam maupun luar tubuh. Kata "homeostasis" berasal dari homeo (sama) dan stasis (menahan/tetap).</p>
+
+            <h3>1. Mengapa Homeostasis Penting?</h3>
+            
+            <p>Jika homeostasis berhasil dipertahankan, proses-proses dalam tubuh berjalan normal dan kehidupan berlanjut. Sebaliknya, jika homeostasis gagal, tubuh dapat mengalami gangguan kesehatan bahkan kematian. Tiga contoh homeostasis dalam tubuh manusia adalah pengaturan suhu tubuh, pengaturan kadar cairan tubuh, dan pengaturan kadar gula darah.</p>
+
+            <h3>2. Pengaturan Suhu Tubuh</h3>
+            
+            <p>Bagian otak yang disebut hipotalamus berperan mengontrol suhu tubuh agar tetap sekitar 37°C.</p>
+            
+            <ol>
+                <li><strong>Saat tubuh kepanasan:</strong> hipotalamus memerintahkan pembuluh darah melebar (dilatasi) dan kelenjar keringat aktif berkeringat, sehingga panas keluar dari tubuh.</li>
+                <li><strong>Saat tubuh kedinginan:</strong> hipotalamus memerintahkan pembuluh darah menyempit (konstriksi) dan otot menggigil untuk menghasilkan panas, sehingga panas tetap tertahan di tubuh.</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="images/gambar1.12_suhu.png" alt="Homeostasis Suhu Tubuh">
+                <div class="image-caption">Gambar 1.12 Homeostasis Suhu Tubuh</div>
+            </div>
+
+            <h3>3. Pengaturan Kadar Cairan Tubuh</h3>
+            
+            <p>Pengaturan cairan tubuh melibatkan hormon ADH (Antidiuretic Hormone) yang dihasilkan kelenjar pituitari.</p>
+            
+            <ol>
+                <li><strong>Jika banyak minum air:</strong> kadar air dalam darah tinggi → produksi ADH menurun → penyerapan air di ginjal berkurang → urine yang dihasilkan lebih banyak dan encer.</li>
+                <li><strong>Jika sedikit minum air (atau banyak berkeringat):</strong> kadar air dalam darah rendah → produksi ADH meningkat → penyerapan air di ginjal bertambah → urine yang dihasilkan sedikit dan pekat.</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="images/gambar1.13_cairan.png" alt="Homeostasis Cairan Tubuh">
+                <div class="image-caption">Gambar 1.13 Homeostasis Cairan Tubuh</div>
+            </div>
+
+            <h3>4. Pengaturan Kadar Gula Tubuh (Gula Darah)</h3>
+            
+            <p>Pengaturan gula darah melibatkan dua hormon dari pankreas yang bekerja berlawanan:</p>
+            
+            <ol>
+                <li><strong>Insulin</strong> — dilepaskan saat kadar gula darah tinggi; membantu sel menyerap glukosa dan mengubahnya menjadi glikogen (disimpan di hati/otot), sehingga gula darah turun kembali normal.</li>
+                <li><strong>Glukagon</strong> — dilepaskan saat kadar gula darah rendah; mengubah glikogen kembali menjadi glukosa, sehingga gula darah naik kembali normal.</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="images/gambar1.14_guladarah.png" alt="Homeostasis Gula Darah">
+                <div class="image-caption">Gambar 1.14 Homeostasis Gula Darah</div>
+            </div>
+
+            <!-- KUNCI MATERI HOMEOSTASIS -->
+            <div class="key-material">
+                <h4>🔑 Kunci Materi — Homeostasis</h4>
+                <ul>
+                    <li>Homeostasis = menjaga kondisi internal tubuh tetap stabil secara otomatis.</li>
+                    <li>Suhu tubuh diatur oleh hipotalamus (target ±37°C).</li>
+                    <li>Kadar cairan tubuh diatur hormon ADH dari pituitari (memengaruhi jumlah & kepekatan urine).</li>
+                    <li>Kadar gula darah diatur hormon insulin (menurunkan) dan glukagon (menaikkan) dari pankreas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer style="text-align: center; padding: 25px; color: #64748b; font-size: 0.9rem; border-top: 2px solid #e2e8f0; margin-top: 30px;">
+            <p><strong>Halaman 1</strong></p>
+            <p style="margin-top: 10px;">© 2024 Materi IPA Kelas IX - Bab 1: Sistem Koordinasi dan Homeostasis</p>
+            <p style="margin-top: 5px;">Untuk belajar mandiri secara bertahap</p>
+        </footer>
     </div>
 
-    <div class="card">
-        <h2>2. Alat Indra Manusia</h2>
-        
-        <h3>a. Indra Penglihatan (Mata)</h3>
-        <div class="img-container">
-            <img src="gambar1.5_mata.png" alt="Mata">
-            <div class="caption">Gambar 1.5 Bagian Mata</div>
-        </div>
-
-        <h3>b. Indra Pendengaran (Telinga)</h3>
-        <div class="img-container">
-            <img src="gambar1.6_telinga.png" alt="Telinga">
-            <div class="caption">Gambar 1.6 Struktur Telinga</div>
-        </div>
-
-        <h3>c. Indra Penciuman (Hidung)</h3>
-        <div class="img-container">
-            <img src="gambar1.7_hidung.png" alt="Hidung">
-            <div class="caption">Gambar 1.7</div>
-        </div>
-
-        <h3>d. Indra Pengecap (Lidah)</h3>
-        <div class="img-container">
-            <img src="gambar1.8_lidah.png" alt="Lidah">
-            <div class="caption">Gambar 1.8</div>
-        </div>
-
-        <div class="key-material">
-            <h4>🔑 Kunci Materi — Alat Indra</h4>
-            <ul>
-                <li>5 indra: mata, telinga, hidung, lidah, kulit</li>
-                <li>Semua indra bekerja sama dengan sistem saraf</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>3. Sistem Endokrin</h2>
-        <div class="img-container">
-            <img src="gambar1.10_endokrin.png" alt="Endokrin">
-            <div class="caption">Gambar 1.10 Kelenjar Endokrin</div>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>B. Homeostasis</h2>
-        <p>Homeostasis adalah proses otomatis tubuh untuk mempertahankan kondisi internal tetap stabil.</p>
-        
-        <h3>Pengaturan Suhu Tubuh</h3>
-        <div class="img-container">
-            <img src="gambar1.12_suhu.png" alt="Suhu">
-            <div class="caption">Gambar 1.12 Homeostasis Suhu Tubuh</div>
-        </div>
-
-        <h3>Pengaturan Cairan Tubuh</h3>
-        <div class="img-container">
-            <img src="gambar1.13_cairan.png" alt="Cairan">
-            <div class="caption">Gambar 1.13 Homeostasis Cairan Tubuh</div>
-        </div>
-
-        <h3>Pengaturan Gula Darah</h3>
-        <div class="img-container">
-            <img src="gambar1.14_guladarah.png" alt="Gula Darah">
-            <div class="caption">Gambar 1.14 Homeostasis Gula Darah</div>
-        </div>
-
-        <div class="key-material">
-            <h4>🔑 Kunci Materi — Homeostasis</h4>
-            <ul>
-                <li>Suhu tubuh diatur oleh hipotalamus (±37°C)</li>
-                <li>Kadar cairan diatur hormon ADH</li>
-                <li>Gula darah diatur insulin dan glukagon</li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2024 Materi IPA Kelas IX - Bab 1</p>
-    </footer>
-</div>
 </body>
 </html>
